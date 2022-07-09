@@ -1,5 +1,9 @@
-from pathlib import Path
+from getKeys import getKeys
 
-keySource = Path('./primeList.txt')
-input = Path('./input.txt')
-output = Path('./output.txt')
+primeList = open('./primeList.txt').readlines()
+#input = open('./input.txt')
+#output = './output.txt'
+
+keysGenerated = getKeys(primeList)
+
+print(keysGenerated)

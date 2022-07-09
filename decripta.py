@@ -1,5 +1,10 @@
-keySource = './primeList.txt'
-input = './input.txt'
-output = './output.txt'
+from getKeys import getKeys
 
-print(open(keySource).read())
+primeList = open('./primeList.txt').readlines()
+#input = open('./input.txt')
+#output = './output.txt'
+
+keysGenerated = getKeys(primeList)
+
+print('Public key: '+str(keysGenerated[0]))
+print('Private key: '+str(keysGenerated[1]))
