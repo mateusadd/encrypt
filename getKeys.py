@@ -1,6 +1,10 @@
 import random
 
-def getKeys(primeList):
+def getKeys():
+
+    primeList = open('./txt_files/primeList.txt').readlines()
+    private = open('./txt_files/private.txt', 'w')
+    public = open('./txt_files/public.txt', 'w')
     
     choices = random.choices(primeList, k=2)
     p = int(choices[0])
@@ -13,9 +17,13 @@ def getKeys(primeList):
 
     d = pow(e, -y)
 
-    publicKey = {e, n}
-    privateKey = {d, n}
+    public.write(str(d) + '\n' + str(n))
+    public.close()
 
-    keysGenerated = [publicKey, privateKey]
+    private.write(str(e) + '\n' + str(n))
+    private.close()
 
-    return keysGenerated
+    #publicKey = {e, n}
+    #privateKey = {d, n}
+
+getKeys()
