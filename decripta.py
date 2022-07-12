@@ -1,10 +1,31 @@
-from getKeys import getKeys
+import text_chunk
+import base64
+import binascii
 
-primeList = open('./primeList.txt').readlines()
-#input = open('./input.txt')
-#output = './output.txt'
+input = open('./txt_files/codificado.txt').readlines()
+output = open('./txt_files/original.txt', 'w')
 
-keysGenerated = getKeys(primeList)
+keyFile = open('./txt_files/private.txt')
 
-print('Public key: '+str(keysGenerated[0]))
-print('Private key: '+str(keysGenerated[1]))
+keys = keyFile.readlines()
+
+mod = int(keys[0])
+key = int(keys[1])
+fullText = ''
+
+#Ler arquivo criptografado
+for line in input:
+
+    #print(line)
+    originalChunk = pow(int(line), mod, key)
+    binascii.unhexlify(hex(originalChunk).strip())
+
+    
+
+
+#Traduzir os inteiros
+
+
+#Decodificar
+
+#Escrever no arquivo de saída

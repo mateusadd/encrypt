@@ -9,18 +9,23 @@ def getKeys():
     choices = random.choices(primeList, k=2)
     p = int(choices[0])
     q = int(choices[1])
+
     n = p*q
+
+    print(n)
 
     y = (p-1)*(q-1)
 
-    e = random.randint(2, y-1)
+    print(y)
 
-    d = pow(e, -y)
+    d = pow(3, -1, y)
 
-    public.write(str(d) + '\n' + str(n))
+    print(d)
+
+    public.write(str(n) + '\n' + str(3))
     public.close()
 
-    private.write(str(e) + '\n' + str(n))
+    private.write(str(n) + '\n' + str(d))
     private.close()
 
     #publicKey = {e, n}
