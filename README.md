@@ -15,13 +15,13 @@ o destino da informação criptografada ou descriptografada e o arquivo contendo
 Tivemos alguma dificuldade na implementação dos métodos disponíveis em text_chunk, mas foi mais por falta de atenção. Após invocar os métodos da maneira correta,
 tudo funcionou sem maiores problemas.
 
-#Testes
+# Testes
 Não fizemos nenhuma classe de testes automatizado, a validação foi feita durante o desenvolvimento. Quando algo não funcionou como esperado, trabalhamos para
 corrigir qualquer erro que impedisse o funcionamento do script. A única coisa que fugiu do esperado foi no momento de testar com o arquivo dest.txt que o
 professor disponibilizou, houve um erro que não conseguimos solucionar. Mas, com os outros arquivos de texto que foram testados após concluir o desenvolvimento,
 tudo correu bem.
 
-#Avaliação do projeto
+# Avaliação do projeto
 Achamos muito interessante essa parte de criptografia, poder ver tudo funcionando após conhecer e trabalhar no background de todo o processo 
 foi muito satisfatório. Existem também muitos outros métodos de criptografia utilizando o Python, como o módulo binascii (que foi uma das tentativas 
 nesta atividade), módulos RSA para gerar chaves automaticamente, o próprio Python nativo possui um método encode() para strings. 
